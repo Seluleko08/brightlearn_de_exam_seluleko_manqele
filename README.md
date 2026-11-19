@@ -1,93 +1,394 @@
 # brightlearn_de_exam_seluleko_manqele
 
-:::writing{variant="document" id="73519"}
-# BrightLearn Data Warehouse Project
+# ⚡ BRIGHTLEARN
 
-<div align="center">
+# DATA ENGINEERING & DATA WAREHOUSE PROJECT
 
-<h1>🔷 BRIGHTLEARN</h1>
+### Turning Raw Data into Meaningful Business Intelligence
 
-<h2>DATA WAREHOUSE PROJECT</h2>
+**DESIGN • EXTRACT • TRANSFORM • LOAD • ANALYSE**
 
-### Turning Raw Sales Data into Meaningful Business Insights
-
-**DATA ENGINEERING | DATA WAREHOUSING | ETL DEVELOPMENT**
-
-![SQL Server](https://img.shields.io/badge/Microsoft_SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL_Server-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
 ![SSIS](https://img.shields.io/badge/SSIS-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
-![T-SQL](https://img.shields.io/badge/T--SQL-00599C?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![T-SQL](https://img.shields.io/badge/T--SQL-2563EB?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
+![Visual Studio](https://img.shields.io/badge/Visual_Studio-6C2EB9?style=for-the-badge&logo=visualstudio&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
-**Developed by Seluleko Manqele**
+**DEVELOPED BY SELULEKO MANQELE**
 
-*Junior Data Engineer*
+*Junior Data Engineer | SQL Server | SSIS | Data Warehousing*
 
 </div>
 
 ---
 
-## 1. Project Overview
+## 📌 01. PROJECT OVERVIEW
 
-The BrightLearn Data Warehouse Project focuses on designing and developing a data warehouse using sales and inventory data provided by BrightLearn.
+The **BrightLearn Data Warehouse Project** focuses on designing and developing a data warehouse solution using sales and inventory data provided by BrightLearn.
 
-The primary objective is to transform raw operational data into a structured and organised data warehouse that supports business reporting, data analysis, and informed decision-making.
+The primary objective is to transform raw operational data into structured, organised, and reliable information that supports business reporting, analytical querying, and informed decision-making.
 
-As a Junior Data Engineer, I am applying practical data engineering skills using Microsoft SQL Server, SQL Server Management Studio (SSMS), Visual Studio, and SQL Server Integration Services (SSIS).
+Using Microsoft SQL Server, SQL Server Management Studio (SSMS), Visual Studio, and SQL Server Integration Services (SSIS), this project demonstrates the practical application of data engineering principles throughout the data lifecycle.
 
-The project covers key stages of the data engineering lifecycle, including:
+The project covers:
 
-- Data extraction and preparation.
-- Data quality assessment.
-- Relational database design.
-- Dimensional modelling.
-- ETL pipeline development.
-- Data transformation and validation.
-- Analytical SQL querying.
+- Data extraction and ingestion.
+- Data profiling and quality assessment.
+- Relational database development.
+- Database design and relationships.
+- ETL pipeline development using SSIS.
+- Data cleansing and transformation.
+- Data validation and integrity checks.
+- SQL-based business analysis.
 
-The resulting data warehouse is designed to help BrightLearn gain insights into sales performance, customer purchasing behaviour, product performance, store revenue, and inventory management.
+The solution is designed to help BrightLearn understand sales performance, customer purchasing behaviour, product performance, store revenue, and inventory levels.
 
-## 2. Project Objectives
+---
 
-The main objectives are to:
+## 🎯 02. PROJECT OBJECTIVES
 
-1. Import and examine the raw BrightLearn sales dataset.
-2. Identify data quality issues, including missing values, duplicates, inconsistent date formats, and invalid records.
-3. Design a structured relational database with appropriate relationships.
-4. Develop a data warehouse using dimensional modelling.
-5. Build ETL workflows using SQL Server Integration Services (SSIS).
-6. Extract, transform, and load data into the warehouse.
-7. Implement data validation and quality checks.
-8. Develop SQL queries to answer business questions.
-9. Document the development process and project findings.
-
-## 3. Tools and Technologies
-
-| Tool | Purpose |
+| Objective | Description |
 |---|---|
-| Microsoft SQL Server | Database management and data storage |
-| SQL Server Management Studio (SSMS) | Writing and executing SQL queries |
-| Visual Studio | SSIS project development |
-| SQL Server Integration Services (SSIS) | ETL pipeline development |
-| T-SQL | Data transformation, validation, and analysis |
-| GitHub | Version control and project documentation |
+| Data Ingestion | Import and examine raw business data |
+| Data Profiling | Identify missing values, duplicates and inconsistencies |
+| Database Design | Develop a structured relational database |
+| ETL Development | Build data integration workflows using SSIS |
+| Data Transformation | Clean, standardise and convert source data |
+| Data Validation | Verify data quality and database integrity |
+| Business Analysis | Develop SQL queries to answer business questions |
+| Documentation | Maintain technical documentation and project evidence |
 
-## 4. Dataset Description
+---
 
-The project uses the provided `BrightLearn_Raw_Data.csv` dataset as its source.
+## 🛠️ 03. TECHNOLOGY STACK
 
-The dataset contains sales and inventory-related information covering January to June 2024.
+<div align="center">
 
-### Dataset Components
-
-| Category | Description |
+| Technology | Application |
 |---|---|
-| Transactions | Transaction dates, payment methods, transaction amounts, and discounts |
-| Customers | Customer names, contact details, locations, and loyalty tiers |
-| Stores | Store names, locations, regions, and store managers |
-| Products | Product names, SKUs, categories, prices, costs, and suppliers |
+| Microsoft SQL Server | Database development and data storage |
+| SSMS | Database management and SQL development |
+| SSIS | ETL pipeline development |
+| Visual Studio | SSIS package development |
+| T-SQL | Data transformation and analytical querying |
+| Git | Version control |
+| GitHub | Source code and project documentation |
+
+</div>
+
+---
+
+## 📂 04. DATASET DESCRIPTION
+
+The project uses the provided `BrightLearn_Raw_Data.csv` dataset.
+
+**Dataset period:** January – June 2024
+
+The dataset contains the following business information:
+
+| Data Category | Description |
+|---|---|
+| Transactions | Transaction dates, payment methods, amounts and discounts |
+| Customers | Customer names, contact details, locations and loyalty tiers |
+| Products | Product names, SKUs, categories, prices, costs and suppliers |
+| Stores | Store names, locations, regions and store managers |
 | Sales | Quantities sold and line amounts |
 | Inventory | Stock on hand and reorder thresholds |
 
+**Dataset Grain:** Each row represents an individual product line item within a sales transaction.
+
+---
+
+## 🏗️ 05. DATA WAREHOUSE DESIGN
+
+The data warehouse design separates descriptive business information into dimension tables and measurable business activities into fact tables.
+
+### Dimension Tables
+
+| Table | Description |
+|---|---|
+| DimCustomer | Customer information and loyalty details |
+| DimProduct | Product details, categories, prices and suppliers |
+| DimStore | Store information, locations and management details |
+| DimDate | Calendar dates, months, quarters and years |
+| DimPayment | Payment methods and cashier information |
+
+### Fact Tables
+
+| Table | Description |
+|---|---|
+| FactSales | Sales quantities, line amounts, transaction amounts and discounts |
+| FactInventory | Stock on hand and reorder thresholds |
+
+### Database Architecture
+
+The following diagram illustrates the intended data warehouse structure.
+
+```mermaid
+flowchart TB
+    A["BrightLearn Raw Data"] --> B["SSIS ETL Process"]
+    B --> C["SQL Server Database"]
+
+    C --> D["Dimension Tables"]
+    C --> E["Fact Tables"]
+
+    D --> F["DimCustomer"]
+    D --> G["DimProduct"]
+    D --> H["DimStore"]
+    D --> I["DimDate"]
+    D --> J["DimPayment"]
+
+    E --> K["FactSales"]
+    E --> L["FactInventory"]
+
+    F --> K
+    G --> K
+    H --> K
+    I --> K
+    J --> K
+
+    G --> L
+    H --> L
+    I --> L
+
+    K --> M["Business SQL Queries"]
+    L --> M
+    M --> N["Business Insights"]
+
+    style A fill:#172554,color:#fff
+    style B fill:#075985,color:#fff
+    style C fill:#1D4ED8,color:#fff
+    style K fill:#164E63,color:#fff
+    style L fill:#164E63,color:#fff
+    style N fill:#065F46,color:#fff
+```
+
+---
+
+## ⚙️ 06. ETL PIPELINE DEVELOPMENT
+
+The project follows the Extract, Transform, Load (ETL) methodology using SQL Server Integration Services (SSIS).
+
+### ETL Workflow
+
+```mermaid
+flowchart LR
+    A["CSV Source"] --> B["EXTRACT"]
+    B --> C["TRANSFORM"]
+    C --> D["VALIDATE"]
+    D --> E["LOAD"]
+    E --> F["SQL Server"]
+
+    style A fill:#172554,color:#fff
+    style B fill:#1D4ED8,color:#fff
+    style C fill:#0369A1,color:#fff
+    style D fill:#0F766E,color:#fff
+    style E fill:#4338CA,color:#fff
+    style F fill:#065F46,color:#fff
+```
+
+### 1. Extract
+
+- Connect to the BrightLearn CSV dataset.
+- Import source records.
+- Examine columns and data structures.
+
+### 2. Transform
+
+- Handle missing and NULL values.
+- Identify duplicate records.
+- Standardise inconsistent formats.
+- Convert data types.
+- Apply appropriate business rules.
+- Validate transformed records.
+
+### 3. Load
+
+- Load processed information into SQL Server.
+- Maintain database relationships.
+- Validate destination records.
+- Verify data consistency.
+
+---
+
+## 🧹 07. DATA QUALITY MANAGEMENT
+
+Data quality is essential for building reliable data solutions.
+
+The project considers the following validation dimensions:
+
+| Quality Dimension | Validation |
+|---|---|
+| Completeness | Missing and NULL values |
+| Uniqueness | Duplicate records |
+| Validity | Invalid dates and numerical values |
+| Consistency | Standardised formats |
+| Integrity | Primary and foreign key relationships |
+| Accuracy | Validation against defined business rules |
+
+A Data Quality Findings Report documents identified issues, their impact, and the actions taken to address them.
+
+---
+
+## 📊 08. BUSINESS INTELLIGENCE & SQL ANALYSIS
+
+The project includes eight business questions (BQ-01 to BQ-08) designed to demonstrate how SQL can transform structured business data into useful information.
+
+The analytical areas include:
+
+**Sales Analysis**
+- Revenue performance.
+- Sales trends.
+- Store performance.
+- Transaction analysis.
+
+**Customer Analysis**
+- Customer purchasing behaviour.
+- Loyalty tier performance.
+- Customer contribution to revenue.
+
+**Product Analysis**
+- Product performance.
+- Product categories.
+- Sales and cost analysis.
+
+**Inventory Analysis**
+- Stock availability.
+- Reorder thresholds.
+- Inventory management.
+
+The SQL solutions and their results are documented as part of the project deliverables.
+
+---
+
+## 💡 09. BUSINESS VALUE
+
+This project demonstrates how data engineering contributes to business operations.
+
+| Business Area | Potential Value |
+|---|---|
+| Sales | Better visibility into sales performance |
+| Customers | Improved understanding of purchasing behaviour |
+| Products | Better product performance analysis |
+| Stores | Comparison of store revenue and performance |
+| Inventory | Improved stock monitoring |
+| Data Quality | More reliable business information |
+
+**The goal is to establish a structured data foundation that supports reliable business reporting and decision-making.**
+
+---
+
+## 📁 10. PROJECT REPOSITORY STRUCTURE
+
+```text
+brightlearn_de_exam_seluleko_manqele/
+│
+├── README.md
+│
+├── Dataset/
+│   └── BrightLearn_Raw_Data.csv
+│
+├── SQL/
+│   ├── Database_Creation.sql
+│   ├── Table_Creation.sql
+│   ├── Data_Quality_Checks.sql
+│   ├── Data_Cleansing.sql
+│   ├── Data_Transformation.sql
+│   └── Business_Queries.sql
+│
+├── SSIS/
+│   └── SSIS_Project/
+│
+├── Documentation/
+│   ├── Database_Design/
+│   ├── ERD/
+│   ├── Data_Quality_Report/
+│   └── ETL_Documentation/
+│
+└── Screenshots/
+    ├── Database/
+    ├── SSIS/
+    └── SQL_Results/
+```
+
+---
+
+## 🚀 11. PROJECT DELIVERABLES
+
+- [ ] Source data ingestion.
+- [ ] Database creation and development.
+- [ ] Entity Relationship Diagram (ERD).
+- [ ] Data quality assessment.
+- [ ] Data cleansing and transformation.
+- [ ] SSIS ETL package development.
+- [ ] Data validation and testing.
+- [ ] Eight business SQL queries.
+- [ ] Technical documentation.
+- [ ] Project demonstration.
+
+---
+
+## 📚 12. TECHNICAL SKILLS DEMONSTRATED
+
+| Technical Area | Skills |
+|---|---|
+| Database Engineering | SQL Server, relational database design |
+| SQL Development | T-SQL, querying and data manipulation |
+| Data Integration | SSIS, ETL development |
+| Data Quality | Cleansing, validation and deduplication |
+| Data Modelling | Database relationships and dimensional modelling |
+| Development Tools | SSMS, Visual Studio |
+| Version Control | Git and GitHub |
+| Business Analysis | Translating business requirements into SQL queries |
+
+---
+
+## 👩‍💻 13. ABOUT THE DEVELOPER
+
+<div align="center">
+
+### SELULEKO MANQELE
+
+**Aspiring Data Engineer**
+
+SQL Server | SSIS | Data Integration | Data Warehousing
+
+</div>
+
+I am building my career in data engineering, with a strong interest in database development, ETL pipeline engineering, data integration, and data quality.
+
+My learning approach focuses on practical implementation, solving business problems, developing technical solutions, and understanding how data moves from source systems into structured environments.
+
+The BrightLearn Data Warehouse Project represents my practical application of data engineering concepts and my commitment to developing industry-relevant technical skills.
+
+### Career Interests
+
+- Data Engineering
+- ETL Pipeline Development
+- SQL Server Development
+- Data Integration
+- Data Quality Engineering
+- Database Development
+- Business Data Analysis
+
+---
+
+<div align="center">
+
+# ⚡ BUILDING DATA SOLUTIONS THAT CREATE VALUE
+
+**DESIGN • INTEGRATE • TRANSFORM • VALIDATE**
+
+Developed by **Seluleko Manqele**
+
+*Turning data into opportunities.*
+
+![SQL](https://img.shields.io/badge/SQL-Data_Engineering-blue?style=flat-square)
+![SSIS](https://img.shields.io/badge/SSIS-ETL_Development-0078D4?style=flat-square)
+![GitHub](https://img.shields.io/badge/GitHub-Portfolio-181717?style=flat-square)
+
+</div>
+:::
 **Dataset Grain:** Each row represents an individual product line item within a sales transaction.
 
 ## 5. Data Warehouse Design
