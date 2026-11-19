@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="localhost.prod_brightmart_dwh"
+  DTS:DTSID="{3DE1C07C-C2D4-452F-83E8-36D58284ED90}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=localhost;Initial Catalog=prod_brightmart_dwh;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-brighmart_etl-{3DE1C07C-C2D4-452F-83E8-36D58284ED90}localhost.prod_brightmart_dwh;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

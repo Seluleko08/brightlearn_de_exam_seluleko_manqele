@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37411.7 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "brighmart_etl", "brighmart_etl.dtproj", "{8DC75E04-50B5-88A4-3BFD-75D7B5F1F92D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DC75E04-50B5-88A4-3BFD-75D7B5F1F92D}.Development|Default.ActiveCfg = Development
+		{8DC75E04-50B5-88A4-3BFD-75D7B5F1F92D}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DFA473D-C608-42A6-BAF9-F8E3BFE0F5AC}
+	EndGlobalSection
+EndGlobal
